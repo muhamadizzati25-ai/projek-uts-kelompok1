@@ -1,0 +1,16 @@
+{
+  "name": "jadwal-sholat-indonesia",
+  "version": "1.0.0",
+  "description": "REST API jadwal sholat kota-kota di Indonesia",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}

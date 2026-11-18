@@ -1,0 +1,92 @@
+{
+  "info": {
+    "name": "Jadwal Sholat Indonesia",
+    "description": "Koleksi pengujian REST API project UTS",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Beranda API",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:3000/"
+      }
+    },
+    {
+      "name": "Tampilkan semua jadwal",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:3000/api/jadwal"
+      }
+    },
+    {
+      "name": "Detail jadwal ID 1",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:3000/api/jadwal/1"
+      }
+    },
+    {
+      "name": "Cari kota Bandung",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:3000/api/jadwal/cari/kota?kota=Bandung"
+      }
+    },
+    {
+      "name": "Tambah jadwal Makassar",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"kota\": \"Makassar\", \"provinsi\": \"Sulawesi Selatan\", \"tanggal\": \"2026-11-18\", \"subuh\": \"04:35\", \"dzuhur\": \"12:00\", \"ashar\": \"15:20\", \"maghrib\": \"18:05\", \"isya\": \"19:15\"}"
+        },
+        "url": "http://localhost:3000/api/jadwal"
+      }
+    },
+    {
+      "name": "Ubah jadwal ID 1",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"maghrib\":\"17:49\"}"
+        },
+        "url": "http://localhost:3000/api/jadwal/1"
+      }
+    },
+    {
+      "name": "Hapus jadwal ID 6",
+      "request": {
+        "method": "DELETE",
+        "url": "http://localhost:3000/api/jadwal/6"
+      }
+    },
+    {
+      "name": "Sholat berikutnya ID 1 dari jam 13:00",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:3000/api/jadwal/1/berikutnya?jam=13:00"
+      }
+    },
+    {
+      "name": "Daftar kota",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:3000/api/kota"
+      }
+    }
+  ]
+}
